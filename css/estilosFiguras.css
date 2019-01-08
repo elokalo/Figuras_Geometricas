@@ -1,0 +1,148 @@
+html{
+  box-sizing: border-box;
+}
+*, *:before, *:after{
+  box-sizing: inherit; /*Hereda el valor del selector 'html'*/
+}
+*{
+  margin: 0;
+  padding: 0;
+}
+
+body{
+	background-image: linear-gradient(120deg, #a6c0fe 0%, #f68084 100%);
+	background-repeat: no-repeat;
+	background-attachment: fixed;
+	height: 100%;
+}
+
+.contenedor{
+	width: 80%;
+	margin: 0px auto;
+	font-family: 'Gloria Hallelujah', cursive;
+	text-align: center;
+}
+
+h1{
+	width: auto;
+	font-family: 'Allerta Stencil', sans-serif;
+	text-align: center;
+	text-transform: uppercase;
+	margin: 20px auto;
+	font-size: 2.8em;
+}
+
+h3{
+	font-family: 'Allerta Stencil', sans-serif;
+	font-size: 1.5em;
+	transition: all 0.5s ease-in;
+	text-align: center;
+}
+
+#figura{
+	width: 150px;
+	height: 150px;
+	margin: 30px auto;
+}
+
+#figura:hover{
+	transform: scale(1.1);
+}
+
+#botonera{
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: space-around;
+}
+
+button{
+	margin: 20px;
+	font-family: 'Allerta Stencil', sans-serif;
+	padding: 10px;
+	font-size: 1.2em;
+	background-color: rgba(173, 109, 230, 0.7);
+	border: none;
+	cursor: pointer;
+	transition: all 0.3s ease-out;
+}
+
+button:hover{
+	background-color: rgb(204,78,78);
+	-webkit-box-shadow: 0 0 10px 10px rgb(204,78,78);
+	box-shadow: 0 0 10px 10px rgb(204,78,78);
+}
+
+p, label{
+	font-size: 16px;
+	text-transform: uppercase;
+	font-weight: bold;
+}
+
+p span{
+	font-size: 12px;
+}
+
+hr{
+	border: 1px solid black;
+	color: black;
+}
+
+input{
+	width: 100px;
+	font-size: 16px;
+}
+
+#datos:after {
+	content: '';
+	display: block;
+	clear: both;
+}
+
+#datos{
+	margin: 0 auto;
+	text-align: center;
+}
+
+#perimetro{
+	display: block;
+	width: 80%;
+	margin: 0 auto;
+	margin-bottom: 20px;
+}
+
+
+#area{
+	display: block;
+	width: 80%;
+	margin: 0 auto;
+}
+
+#area table{
+	text-align: center;
+	margin: 0 auto;
+}
+
+@media screen and (min-width: 680px){
+	#perimetro{
+		float: left;
+		width: 50%;
+		margin: 0 auto;
+	}
+
+	#area{
+		float: right;
+		width: 50%;
+		margin: 0 auto;
+	}
+}
+
+div.cuadrado, div.rectangulo, div.triangulo, div.circulo, div.rombo, div.romboide, div.trapecio, div.pentagono, div.hexagono{
+	display: none;
+}
+
+footer{
+	font-family: 'Gloria Hallelujah', cursive;
+	text-align: center;
+	padding: 20px;
+}
+

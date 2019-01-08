@@ -1,0 +1,260 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link rel="shortcut icon" href="icono_fg.png">
+	<link href="https://fonts.googleapis.com/css?family=Allerta+Stencil|Gloria+Hallelujah" rel="stylesheet">
+	<link rel="stylesheet" type="text/css" href="css/estilosFiguras.css">
+	<title>Figuras Geométricas</title>
+</head>
+<body>
+
+	<div class="contenedor">
+		<h1>Figuras Geometricas</h1>
+		
+		<p id="descripcion">Hola!, calcula de forma interactiva el perímetro y área de algunas figuras geométricas. Elige la que quieras!</p>
+
+		<div class="figura" id="figura"></div>
+
+		<div id="botonera">
+			<button class="cuadrado">Cuadrado</button>
+			<button class="rectangulo">Rectángulo</button>
+			<button class="triangulo">Triángulo</button>
+			<button class="circulo">Círculo</button>
+			<button class="rombo">Rombo</button>
+			<button class="romboide">Romboide</button>
+			<button class="trapecio">Trapecio</button>
+		</div> <!--.botonera-->
+
+		<div id="datos">
+			<p>Inserta los datos de tu figura geométrica ya sea para calcular el perímetro o el área</p>
+
+			<div id="perimetro">
+				<h3>>Perímetro<</h3>
+				<div class="cuadrado formula">
+					<p>P = 4L</p>
+					<label>Valor del Lado:</label>
+					<input type="number" min="0" class="ladoCua" value="">
+					<br>
+					<label>Resultado:</label>
+					<input type="number" min="0" id="rePeCua" value="">
+				</div>
+				<div class="rectangulo formula">
+					<p>P = 2B + 2H</p>
+					<label>Base:</label>
+					<input type="number" min="0" class="baseRec" value="">
+					<br>
+					<label>Altura:</label>
+					<input type="number" min="0" class="alturaRec" value="">
+					<br>
+					<label>Resultado:</label>
+					<input type="number" min="0" id="rePeRec" value="">
+				</div>
+				<div class="triangulo formula">
+					<p>P = 3L <span>(Es un triangulo equilátero)</span></p>
+					<label>Valor del Lado:</label>
+					<input type="number" min="0" id="ladoTri" value="">
+					<br>
+					<label>Resultado:</label>
+					<input type="number" min="0" id="rePeTri" value="">
+				</div>
+				<div class="circulo formula">
+					<p>P = D x &#928 <span>(&#928 = 3.1416)</span></p>
+					<label>Diámetro</label>
+					<input type="number" min="0" id="diametro" value="">
+					<br>
+					<label>Resultado:</label>
+					<input type="number" min="0" id="rePeCir" value="">
+				</div>
+				<div class="rombo formula">
+					<p>P = 4L</p>
+					<label>Valor del Lado:</label>
+					<input type="number" min="0" id="ladoRombo" value="">
+					<br>
+					<label>Resultado:</label>
+					<input type="number" min="0" id="rePeRombo" value="">
+				</div>
+				<div class="romboide formula">
+					<p>P = 2B + 2H</p>
+					<label>Base:</label>
+					<input type="number" min="0" class="baseRom" value="">
+					<br>
+					<label>Altura:</label>
+					<input type="number" min="0" class="alturaRom" value="">
+					<br>
+					<label>Resultado:</label>
+					<input type="number" min="0" id="rePeRom" value="">
+				</div>
+				<div class="trapecio formula">
+					<p>P = L<sub>Sup</sub>  + L<sub>Der</sub> + L<sub>Inf</sub> + L<sub>Izq</sub></p>
+					<label>Lado Superior:</label>
+					<input type="number" min="0" class="ladoTrap" value="">
+					<br>
+					<label>Lado Derecho:</label>
+					<input type="number" min="0" class="ladoTrap" value="">
+					<br>
+					<label>Lado Inferior:</label>
+					<input type="number" min="0" class="ladoTrap" value="">
+					<br>
+					<label>Lado Izquierdo:</label>
+					<input type="number" min="0" class="ladoTrap" value="">
+					<br>
+					<label>Resultado:</label>
+					<input type="number" min="0" id="rePeTrap" value="">
+				</div>
+			</div> <!--#perimetro-->
+
+			<div id="area">
+				<h3>>Área<</h3>
+				<div class="cuadrado formula">
+					<p>A = L<sup>2</sup></p>
+					<label>Valor del Lado:</label>
+					<input type="number" min="0" class="ladoCua" value="">
+					<br>
+					<label>Resultado:</label>
+					<input type="number" min="0" id="reArCua" value="">
+				</div>
+				<div class="rectangulo formula">
+					<p>A = B x H</p>
+					<label>Base:</label>
+					<input type="number" min="0" class="baseRec" value="">
+					<br>
+					<label>Altura:</label>
+					<input type="number" min="0" class="alturaRec" value="">
+					<br>
+					<label>Resultado:</label>
+					<input type="number" min="0" id="reArRec" value="">
+				</div>
+				<div class="triangulo formula">
+					<table border="0" cellpadding="2">
+			            <tbody>
+			              <tr>
+			                <td rowspan="3">
+			                  <p align="center">A =&nbsp;</p>                
+			              	</td>
+			                <td>
+			                  <p align="center">B x H</p>       
+			              	</td>
+			              </tr>
+			              <tr>
+			                <td>
+			                  <hr>
+			              	</td>
+			              </tr>
+			              <tr>
+			                <td>
+			                  <p align="center">2</p>
+			              	</td>
+			              </tr>
+			            </tbody>
+					</table>
+					<label>Base:</label>
+					<input type="number" min="0" id="baseTri" value="">
+					<br>
+					<label>Altura:</label>
+					<input type="number" min="0" id="alturaTri" value="">
+					<br>
+					<label>Resultado:</label>
+					<input type="number" min="0" id="reArTri" value="">
+				</div>
+				<div class="circulo formula">
+					<p>A = &#928 x R<sup>2</sup></p>
+					<label>Radio</label>
+					<input type="number" min="0" id="radio" value="">
+					<br>
+					<label>Resultado:</label>
+					<input type="number" min="0" id="reArCir" value="">
+				</div>
+				<div class="rombo formula">
+					<table border="0" cellpadding="2">
+			            <tbody>
+			              <tr>
+			                <td rowspan="3">
+			                  <p align="center">A =&nbsp;</p>                
+			              	</td>
+			                <td>
+			                  <p align="center">D<sub>mayor</sub> x D<sub>menor</sub> </p>       
+			              	</td>
+			              </tr>
+			              <tr>
+			                <td>
+			                  <hr>
+			              	</td>
+			              </tr>
+			              <tr>
+			                <td>
+			                  <p align="center">2</p>
+			              	</td>
+			              </tr>
+			            </tbody>
+					</table>
+					<label>Diagonal Mayor:</label>
+					<input type="number" min="0" id="diagMay" value="">
+					<br>
+					<label>Diagonal Menor:</label>
+					<input type="number" min="0" id="diagMen" value="">
+					<br>
+					<label>Resultado:</label>
+					<input type="number" min="0" id="reArRombo" value="">
+				</div>
+				<div class="romboide formula">
+					<p>A = B x H</p>
+					<label>Base:</label>
+					<input type="number" min="0" class="baseRom" value="">
+					<br>
+					<label>Altura:</label>
+					<input type="number" min="0" class="alturaRom" value="">
+					<br>
+					<label>Resultado:</label>
+					<input type="number" min="0" id="reArRom" value="">
+				</div>
+				<div class="trapecio formula">
+					<table border="0" cellpadding="2">
+			            <tbody>
+			              <tr>
+			                <td rowspan="3">
+			                  <p align="center">A =&nbsp;</p>                
+			              	</td>
+			                <td>
+			                  <p align="center">H (B<sub>mayor</sub> + B<sub>menor</sub>)</p>       
+			              	</td>
+			              </tr>
+			              <tr>
+			                <td>
+			                  <hr>
+			              	</td>
+			              </tr>
+			              <tr>
+			                <td>
+			                  <p align="center">2</p>
+			              	</td>
+			              </tr>
+			            </tbody>
+					</table>
+					<label>Altura:</label>
+					<input type="number" min="0" id="alturaTrap" value="15">
+					<br>
+					<label>Base Mayor:</label>
+					<input type="number" min="0" id="baseMay" value="15">
+					<br>
+					<label>Base Menor:</label>
+					<input type="number" min="0" id="baseMen" value="15">
+					<br>
+					<label>Resultado:</label>
+					<input type="number" min="0" id="reArTrap" value="">
+				</div>
+			</div> <!--#area-->
+		</div> <!--#datos-->	
+	</div> <!--.contenedor-->
+	
+	<footer>
+		<p>Derechos Reservados &copy</p>
+	</footer>
+
+	<script type="text/javascript" src="js/jquery-3.3.1.min.js"></script>
+	<script type="text/javascript" src="js/script.js"></script>
+	
+
+</body>
+</html>
